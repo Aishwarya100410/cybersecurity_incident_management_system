@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - Reporting and Analysis</title>
+<style>
+    /* Reset CSS */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        background-image:url('https://ntrepidcorp.com/wp-content/uploads/2023/02/BlogImagery-Feb2023-400x300.png');
+    }
+
+    /* Navigation bar */
+    .navbar {
+        background-color: #4b89ff;
+        overflow: hidden;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .navbar a:hover {
+        background-color: #1e88e5;
+    }
+
+    /* Page content */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Report section */
+    .report {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        color: #4b89ff;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #666;
+    }
+
+    /* Chart */
+    .chart {
+        width: 100%;
+        height: 400px;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<div class="navbar">
+    <a href="/admindashboard">Dashboard</a>
+    <a href="/incidentmanagement">Incident Management</a>
+     
+    <a href=".analysis">Reporting and Analysis</a>
+    <a href="/settings">Settings</a>
+    <a href="/logout">Log Out</a>
+</div>
+
+<!-- Page content -->
+<div class="container">
+    <h2>Reporting and Analysis</h2>
+
+    <!-- Report section 1 -->
+    <div class="report">
+        <h3>Incident Trend Analysis</h3>
+        <p>Analyze the trend of cybersecurity incidents over time.</p>
+        <div class="chart" align="center">
+         <img src="https://blog.checkpoint.com/wp-content/uploads/2023/01/sum2.jpg">
+    </div>
+
+    <!-- Report section 2 -->
+    <div class="report">
+        <h3>Root Cause Analysis</h3>
+        <p>Analyze the root causes of cybersecurity incidents.</p>
+        <div class="chart" align="center">
+            <img src="https://www.researchgate.net/publication/331210253/figure/fig3/AS:728084324028417@1550600238982/Pie-chart-showing-Mitigation-Techniques-Used-against-APT-by-25-researchers.ppm">
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

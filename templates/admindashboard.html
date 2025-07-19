@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - Dashboard</title>
+<style>
+    /* Reset CSS */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        background-image:url('https://ntrepidcorp.com/wp-content/uploads/2023/02/BlogImagery-Feb2023-400x300.png');
+        background-repeat: repeat;
+    }
+
+    /* Navigation bar */
+    .navbar {
+        background-color: #4b89ff;
+        overflow: hidden;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .navbar a:hover {
+        background-color: #1e88e5;
+    }
+
+    /* Page content */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Dashboard cards */
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        color: #4b89ff;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #666;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<div class="navbar">
+    <a href="/admindashboard">Dashboard</a>
+    <a href="/incidentmanagement">Incident Management</a>
+     
+    <a href="/analysis">Reporting and Analysis</a>
+    <a href="/settings">Settings</a>
+    <a href="/logout">Log Out</a>
+</div>
+
+<!-- Page content -->
+<div class="container">
+    <h2>Dashboard</h2>
+    <div class="card">
+        <h3>Total Users</h3>
+        <p>100</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Cases</h3>
+        <p>500</p>
+    </div>
+
+    <div class="card">
+        <h3>Revenue</h3>
+        <p>10,00,000</p>
+    </div>
+</div>
+
+</body>
+</html>
+

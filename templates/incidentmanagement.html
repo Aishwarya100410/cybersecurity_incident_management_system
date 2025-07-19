@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - Incident Management</title>
+<style>
+    /* Reset CSS */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        background-image:url('https://ntrepidcorp.com/wp-content/uploads/2023/02/BlogImagery-Feb2023-400x300.png');
+    }
+
+    /* Navigation bar */
+    .navbar {
+        background-color: #4b89ff;
+        overflow: hidden;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .navbar a:hover {
+        background-color: #1e88e5;
+    }
+
+    /* Page content */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Incident cards */
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .high {
+        background-color: #ff3b30;
+    }
+
+    .medium {
+        background-color: #ffcc00;
+    }
+
+    .low {
+        background-color: #4cd964;
+    }
+
+    h2 {
+        color: #4b89ff;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #666;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<div class="navbar">
+    <a href="/admindashboard">Dashboard</a>
+    <a href="/incidentmanagement">Incident Management</a>
+     
+    <a href="/analysis">Reporting and Analysis</a>
+    <a href="/settings">Settings</a>
+    <a href="/logout">Log Out</a>
+</div>
+
+<!-- Page content -->
+<div class="container">
+    <h2>Incident Management</h2>
+    <div class="card high">
+        <h3>High Severity Incident</h3>
+        <p>Description: SQL Injection attack detected.</p>
+        <p>Affected System: Database Server</p>
+    </div>
+
+    <div class="card medium">
+        <h3>Medium Severity Incident</h3>
+        <p>Description: Phishing attempt reported.</p>
+        <p>Affected System: Email Server</p>
+    </div>
+
+    <div class="card low">
+        <h3>Low Severity Incident</h3>
+        <p>Description: Unauthorized access to file share.</p>
+        <p>Affected System: File Server</p>
+    </div>
+</div>
+
+</body>
+</html>

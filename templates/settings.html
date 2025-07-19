@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - Settings</title>
+<style>
+    /* Reset CSS */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color:white;
+        background-image:url('https://ntrepidcorp.com/wp-content/uploads/2023/02/BlogImagery-Feb2023-400x300.png');
+    }
+
+    /* Navigation bar */
+    .navbar {
+        background-color: #4b89ff;
+        overflow: hidden;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .navbar a:hover {
+        background-color: #1e88e5;
+    }
+
+    /* Page content */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #4b89ff;
+        margin-bottom: 20px;
+    }
+
+    .setting {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #4b89ff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #1e88e5;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<div class="navbar">
+    <a href="/admindashboard">Dashboard</a>
+    <a href="/incidentmanagement">Incident Management</a>
+     
+    <a href="/analysis">Reporting and Analysis</a>
+    <a href="/settings">Settings</a>
+    <a href="/logout">Log Out</a>
+</div>
+
+<!-- Page content -->
+<div class="container">
+    <h2>Settings</h2>
+
+    <!-- Example setting -->
+    <div class="setting">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+    </div>
+
+    <!-- Example setting -->
+    <div class="setting">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+    </div>
+
+    <!-- Example setting -->
+    <div class="setting">
+        <label for="theme">Theme:</label>
+        <select id="theme" name="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+
+    <button type="submit">Save Settings</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Incident Management System - Track Incidents</title>
+  <style>
+    /* Reset CSS */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Global styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      background-image:url('https://www.shutterstock.com/shutterstock/videos/1081545470/thumb/1.jpg?ip=x480');
+    }
+
+    a {
+      color: #4b89ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #1e88e5;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+    }
+
+    /* Header styles */
+    header {
+      background: linear-gradient(135deg, #4b89ff, #8f6bff);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* Main content styles */
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+    h3{
+      color:white;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #4b89ff;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+     
+    }
+
+    #incidentList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .incidentItem {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .incidentItem:hover {
+      transform: translateY(-5px);
+    }
+
+    .incidentTitle {
+      color: #4b89ff;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .incidentDescription {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
+    .incidentStatus {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Footer styles */
+    footer {
+      background: linear-gradient(135deg, #4b89ff, #8f6bff);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 20px;
+
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Track Incidents</h1>
+    <nav>
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/report">Report Incident</a></li>
+        <li><a href="/track">Track Incidents</a></li>
+        <li><a href="/tips">Tips</a></li>
+        <li><a href="/logout">Log out</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Incident Tracking</h2>
+    <h3>Below are the reported incidents and their current statuses:</h3>
+    <ul id="incidentList">
+      <li class="incidentItem">
+        <h3 class="incidentTitle">Data Breach</h3>
+        <p class="incidentDescription">Unauthorized access to sensitive information.</p>
+        <p class="incidentStatus">Status: In Progress</p>
+      </li>
+      <li class="incidentItem">
+        <h3 class="incidentTitle">Phishing Attack</h3>
+        <p class="incidentDescription">Suspicious emails attempting to obtain login credentials.</p>
+        <p class="incidentStatus">Status: Resolved</p>
+      </li>
+      <!-- Additional incident items can be added dynamically -->
+    </ul>
+  </main>
+  <footer>
+    <p>&copy; 2022 Cybersecurity Incident Management System. All rights reserved.</p>
+  </footer>
+</body>
+</html> 
+
+

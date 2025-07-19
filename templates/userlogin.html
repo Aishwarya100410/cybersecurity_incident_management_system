@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            color: white;
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/006/970/842/small_2x/technology-digital-data-network-connection-and-cyber-security-concept-social-network-connections-global-network-5g-high-speed-internet-connection-data-analysis-abstract-background-photo.jpg');
+            background-repeat: repeat;
+            height: 100%;
+            font-family: 'Numans', sans-serif;
+        }
+        .card {
+            height: 300px;
+            margin-top: 200px;
+            width: 400px;
+            background-color: rgba(0,0,0,0.5) !important;
+        }
+        .btn-primary {
+            background-color: darkblue;
+            border-color: black;
+        }
+        .btn-primary:hover {
+            background-color: blue;
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <center><b><h1>CYBERSECURITY INCIDENT MANAGEMENT SYSTEM</h1></b></center>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-header"><center>User Login</center></h2>
+                        <form id="login" method="POST" action="{% url 'userlogin' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="loginUsername" name="username" placeholder="Username" required pattern="[A-Za-z0-9]+">
+                                <div class="invalid-feedback">Username should only contain letters and numbers.</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Password" required minlength="8">
+                                <div class="invalid-feedback">Invalid username or password.</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </form>
+                        <p class="text-center">Don't have an account? <a href="{% url 'register' %}">Register here</a>.</p>
+                        <div id="error-message" class="alert alert-danger mt-3 d-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    const loginForm = document.getElementById('loginForm');
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const errorMessageElement = document.getElementById('errorMessage');
+
+const users = [
+  { username: 'user1', password: 'password1' },
+  { username: 'user2', password: 'password2' },
+  // Add more users as needed
+];
+
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const enteredUsername = usernameInput.value.trim();
+  const enteredPassword = passwordInput.value.trim();
+
+  let isValidCredentials = false;
+
+  for (const user of users) {
+    if (user.username === enteredUsername && user.password === enteredPassword) {
+      isValidCredentials = true;
+      break;
+    }
+  }
+
+  if (!isValidCredentials) {
+    errorMessageElement.innerHTML = 'Invalid username or password.';
+  } else {
+    errorMessageElement.innerHTML = '/home';
+    // Redirect to the dashboard or another page after successful login
+  }
+});
+</script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    

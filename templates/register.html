@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            color: white;
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/006/970/842/small_2x/technology-digital-data-network-connection-and-cyber-security-concept-social-network-connections-global-network-5g-high-speed-internet-connection-data-analysis-abstract-background-photo.jpg');
+            background-repeat: repeat;
+            height: 100%;
+            font-family: 'Numans', sans-serif;
+        }
+        .card {
+            height: 450px;
+            margin-top: 150px;
+            width: 400px;
+            background-color: rgba(0,0,0,0.5) !important;
+        }
+        .btn-primary {
+            background-color: darkblue;
+            border-color: black;
+        }
+        .btn-primary:hover {
+            background-color: blue;
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <center><b><h1>CYBERSECURITY INCIDENT MANAGEMENT SYSTEM</h1></b></center>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-header"><center>Register</center></h2>
+                        <form id="register" method="POST" action="{% url 'register' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="registerName" name="username" placeholder="Username" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="registerEmail" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="registerPassword" name="password1" placeholder="Password" required minlength="8">
+                                <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="confirmPassword" name="password2" placeholder="Confirm Password" required>
+                                <div class="invalid-feedback">Passwords do not match.</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        </form>
+                        <p class="text-center">Already have an account? <a href="{% url 'userlogin' %}">Login here</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('register').addEventListener('submit', function(event) {
+            var password = document.getElementById('registerPassword').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                event.preventDefault();
+                document.getElementById('confirmPassword').setCustomValidity('Passwords do not match');
+            } else {
+                document.getElementById('confirmPassword').setCustomValidity('');
+            }
+        });
+    </script>
+    <script>
+        // Display an alert if the form was successfully submitted
+        document.addEventListener('DOMContentLoaded', function() {
+          {% if messages %}
+            {% for message in messages %}
+              alert('{{ message }}');
+            {% endfor %}
+          {% endif %}
+        });
+      </script>
+</body>
+</html>
